@@ -1,0 +1,30 @@
+program base428;
+uses math;
+var 
+    
+     i, j, r, r8, n, m1: longint ;
+    m , result: real;
+    
+begin
+    i := 0; m := 0;
+   readln(n);
+    while(n>0) do
+        begin
+            r := n mod 10;
+            n := n div 10;
+            m := m + r* power(4 , i );
+            i := i + 1;
+        end;
+    j := 0; result := 0; 
+    m1 := trunc(m);
+    while(m1 > 0 ) do
+        begin
+            r8 := m1 mod 8;
+            m1 := m1 div 8;
+            result := result + r8 * power(10, j);
+            j := j +1;
+            
+        end;
+        writeln(result)
+end.
+

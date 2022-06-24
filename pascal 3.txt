@@ -1,0 +1,40 @@
+program char_op;
+
+var 
+    s : string;
+    c, ch: char;
+    i: integer;
+    b: boolean;
+    count: array  [0 .. 9] of integer;
+
+begin
+  readln(s );
+  write('The converted string is: ');
+  for i in [0..9] do count[i] := 0;
+  for c in s do 
+    begin
+        if (c in ['0' .. '9']) then
+            begin
+                count[ord(c) - 48] := count[ord(c) - 48 ] +1 ;
+                write(c);
+            end
+        else if  (c in ['a'..'z']) then
+            begin
+                ch := chr(ord(c)-(ord('a')-ord('A')));
+                 Write(ch);
+            end;
+    end;
+  
+ writeln();
+ writeln('the count of  0 is', count[0]);
+ writeln('the count of  1 is', count[1]);
+ writeln('the count of  2 is', count[2]);
+ writeln('the count of  3 is', count[3]);
+ writeln('the count of  4 is', count[4]);
+ writeln('the count of  5 is', count[5]);
+ writeln('the count of  6 is', count[6]);
+ writeln('the count of  7 is', count[7]);
+ writeln('the count of  8 is', count[8]);
+ writeln('the count of  9 is', count[9]);
+end.
+
